@@ -1,10 +1,11 @@
-from dotenv import load_dotenv
-from email.message import EmailMessage
 import ssl
 import smtplib
 import os
 import sys
-if(len(sys.argv) !=2):
+from email.message import EmailMessage
+from dotenv import load_dotenv
+
+if len(sys.argv) !=2:
     print('[-] Run the script with python_app.py <email_of_receiver>')
     sys.exit()
 load_dotenv()
